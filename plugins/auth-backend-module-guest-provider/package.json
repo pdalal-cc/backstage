@@ -37,7 +37,7 @@
     "@backstage/backend-plugin-api": "workspace:^",
     "@backstage/catalog-model": "workspace:^",
     "@backstage/errors": "workspace:^",
-    "@backstage/plugin-auth-node": "workspace:^",
+    "@backstage/plugin-auth-node": "0.1.0",
     "passport-oauth2": "^1.7.0"
   },
   "devDependencies": {
