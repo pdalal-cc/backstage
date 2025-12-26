@@ -37,7 +37,7 @@
   "dependencies": {
     "@backstage/backend-plugin-api": "workspace:^",
     "@backstage/config": "workspace:^",
-    "@backstage/plugin-search-backend-node": "workspace:^",
+    "@backstage/plugin-search-backend-node": "0.1.2",
     "@backstage/plugin-search-common": "workspace:^",
     "qs": "^6.9.4"
   },
