@@ -36,7 +36,7 @@
     "@backstage/core-app-api": "workspace:^",
     "@backstage/core-plugin-api": "workspace:^",
     "@backstage/errors": "workspace:^",
-    "@backstage/frontend-defaults": "workspace:^",
+    "@backstage/frontend-defaults": "0.1.0",
     "@backstage/frontend-plugin-api": "workspace:^",
     "@backstage/types": "workspace:^",
     "@backstage/version-bridge": "workspace:^",
