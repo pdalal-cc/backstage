@@ -39,15 +39,15 @@
     "test": "backstage-cli package test"
   },
   "dependencies": {
-    "@backstage/backend-plugin-api": "workspace:^",
+    "@backstage/backend-plugin-api": "0.1.0",
     "@backstage/catalog-model": "workspace:^",
     "@backstage/config": "workspace:^",
     "@backstage/errors": "workspace:^",
     "@backstage/plugin-catalog-node": "workspace:^",
     "@backstage/plugin-notifications-common": "workspace:^",
-    "@backstage/plugin-notifications-node": "workspace:^",
+    "@backstage/plugin-notifications-node": "0.0.1",
     "@backstage/plugin-signals-node": "workspace:^",
-    "@backstage/types": "workspace:^",
+    "@backstage/types": "0.1.1",
     "express": "^4.22.0",
     "express-promise-router": "^4.1.0",
     "knex": "^3.0.0",
