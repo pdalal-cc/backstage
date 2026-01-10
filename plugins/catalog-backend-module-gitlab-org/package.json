@@ -33,9 +33,9 @@
     "test": "backstage-cli package test"
   },
   "dependencies": {
-    "@backstage/backend-plugin-api": "workspace:^",
-    "@backstage/plugin-catalog-backend-module-gitlab": "workspace:^",
-    "@backstage/plugin-catalog-node": "workspace:^",
+    "@backstage/backend-plugin-api": "0.1.0",
+    "@backstage/plugin-catalog-backend-module-gitlab": "0.1.0",
+    "@backstage/plugin-catalog-node": "1.0.0",
     "@backstage/plugin-events-node": "workspace:^"
   },
   "devDependencies": {
