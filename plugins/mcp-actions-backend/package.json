@@ -34,14 +34,14 @@
     "test": "backstage-cli package test"
   },
   "dependencies": {
-    "@backstage/backend-defaults": "workspace:^",
+    "@backstage/backend-defaults": "0.1.0",
     "@backstage/backend-plugin-api": "workspace:^",
     "@backstage/catalog-client": "workspace:^",
     "@backstage/errors": "workspace:^",
     "@backstage/plugin-catalog-node": "workspace:^",
     "@backstage/types": "workspace:^",
     "@cfworker/json-schema": "^4.1.1",
-    "@modelcontextprotocol/sdk": "^1.24.3",
+    "@modelcontextprotocol/sdk": "^1.25.2",
     "express": "^4.22.0",
     "express-promise-router": "^4.1.0",
     "zod": "^3.22.4"
