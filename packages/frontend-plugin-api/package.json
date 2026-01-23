@@ -40,13 +40,13 @@
     "test": "backstage-cli package test"
   },
   "dependencies": {
-    "@backstage/config": "workspace:^",
-    "@backstage/core-components": "workspace:^",
+    "@backstage/config": "0.1.1",
+    "@backstage/core-components": "0.1.0",
     "@backstage/errors": "workspace:^",
-    "@backstage/types": "workspace:^",
+    "@backstage/types": "0.1.1",
     "@backstage/version-bridge": "workspace:^",
     "@material-ui/core": "^4.12.4",
-    "lodash": "^4.17.21",
+    "lodash": "^4.17.23",
     "zod": "^3.22.4",
     "zod-to-json-schema": "^3.21.4"
   },
