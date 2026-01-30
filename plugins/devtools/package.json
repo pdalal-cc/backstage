@@ -52,10 +52,10 @@
     "test": "backstage-cli package test"
   },
   "dependencies": {
-    "@backstage/core-compat-api": "workspace:^",
-    "@backstage/core-components": "workspace:^",
+    "@backstage/core-compat-api": "0.0.0",
+    "@backstage/core-components": "0.8.6",
     "@backstage/core-plugin-api": "workspace:^",
-    "@backstage/errors": "workspace:^",
+    "@backstage/errors": "0.1.1",
     "@backstage/frontend-plugin-api": "workspace:^",
     "@backstage/plugin-devtools-common": "workspace:^",
     "@backstage/plugin-permission-react": "workspace:^",
