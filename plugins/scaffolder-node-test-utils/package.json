@@ -41,9 +41,9 @@
   },
   "dependencies": {
     "@backstage/backend-plugin-api": "workspace:^",
-    "@backstage/backend-test-utils": "workspace:^",
+    "@backstage/backend-test-utils": "0.1.1",
     "@backstage/plugin-scaffolder-node": "workspace:^",
-    "@backstage/types": "workspace:^",
+    "@backstage/types": "0.1.1",
     "winston": "^3.2.1",
     "winston-transport": "^4.7.0"
   },
