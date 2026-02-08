@@ -33,9 +33,9 @@
     "test": "backstage-cli package test"
   },
   "dependencies": {
-    "@backstage/backend-plugin-api": "workspace:^",
+    "@backstage/backend-plugin-api": "0.1.0",
     "@backstage/catalog-model": "workspace:^",
-    "@backstage/errors": "workspace:^",
+    "@backstage/errors": "0.1.1",
     "@backstage/plugin-auth-node": "workspace:^",
     "@types/passport": "^1.0.16",
     "express": "^4.22.0",
