@@ -18,14 +18,14 @@ import { PackageRole } from '@backstage/cli-node';
 import { startBackend, startBackendPlugin } from './startBackend';
 import { startFrontend } from './startFrontend';
 import { parse, resolve, join } from 'node:path';
-import { glob } from 'glob';
+import { globSync } from 'glob';
 
 export function resolveEntryPath(
   entrypoint: string = 'dev',
   targetDir: string,
 ): string {
   const { dir: entryDir, name: entryName } = parse(entrypoint);
-  const [entryFile] = glob.sync(`${resolve(targetDir, entryDir, entryName)}.*`);
+  const [entryFile] = globSync(`${resolve(targetDir, entryDir, entryName)}.*`);
   if (entryFile) {
     return join(entryDir, entryName);
   }

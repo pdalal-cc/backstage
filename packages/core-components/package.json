@@ -105,7 +105,6 @@
     "@testing-library/dom": "^10.0.0",
     "@testing-library/jest-dom": "^6.0.0",
     "@testing-library/user-event": "^14.0.0",
-    "@types/ansi-regex": "^5.0.0",
     "@types/classnames": "^2.2.9",
     "@types/d3-selection": "^3.0.1",
     "@types/d3-shape": "^3.0.1",
