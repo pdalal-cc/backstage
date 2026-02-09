@@ -44,9 +44,9 @@
     "test": "backstage-cli package test"
   },
   "dependencies": {
-    "@backstage/errors": "workspace:^",
+    "@backstage/errors": "0.1.1",
     "@backstage/types": "workspace:^",
-    "@backstage/version-bridge": "workspace:^",
+    "@backstage/version-bridge": "0.1.0",
     "zod": "^3.25.76",
     "zod-to-json-schema": "^3.25.1"
   },
