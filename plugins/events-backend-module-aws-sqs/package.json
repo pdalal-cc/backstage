@@ -47,11 +47,11 @@
     "test": "backstage-cli package test"
   },
   "dependencies": {
-    "@aws-sdk/client-sqs": "^3.350.0",
-    "@backstage/backend-plugin-api": "workspace:^",
+    "@aws-sdk/client-sqs": "^3.730.0",
+    "@backstage/backend-plugin-api": "0.1.0",
     "@backstage/config": "workspace:^",
-    "@backstage/plugin-events-node": "workspace:^",
-    "@backstage/types": "workspace:^",
+    "@backstage/plugin-events-node": "0.1.0",
+    "@backstage/types": "0.1.1",
     "luxon": "^3.0.0"
   },
   "devDependencies": {
