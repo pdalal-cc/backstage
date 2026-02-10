@@ -43,14 +43,14 @@
     "test": "backstage-cli package test"
   },
   "dependencies": {
-    "@backstage/backend-plugin-api": "workspace:^",
+    "@backstage/backend-plugin-api": "1.6.1",
     "@backstage/config": "workspace:^",
-    "@backstage/integration": "workspace:^",
-    "@backstage/plugin-events-node": "workspace:^",
-    "@backstage/types": "workspace:^",
+    "@backstage/integration": "0.1.0",
+    "@backstage/plugin-events-node": "0.4.0",
+    "@backstage/types": "0.1.1",
     "@octokit/auth-callback": "^5.0.0",
     "@octokit/webhooks-methods": "^3.0.0",
-    "lodash": "^4.17.21",
+    "lodash": "^4.17.23",
     "octokit": "^3.0.0"
   },
   "devDependencies": {
