@@ -33,13 +33,13 @@
     "test": "backstage-cli package test"
   },
   "dependencies": {
-    "@backstage/backend-plugin-api": "workspace:^",
+    "@backstage/backend-plugin-api": "1.6.1",
     "@backstage/catalog-model": "workspace:^",
-    "@backstage/errors": "workspace:^",
-    "@backstage/plugin-auth-node": "workspace:^",
-    "@backstage/plugin-catalog-node": "workspace:^",
-    "@backstage/plugin-catalog-unprocessed-entities-common": "workspace:^",
-    "@backstage/plugin-permission-common": "workspace:^",
+    "@backstage/errors": "0.1.1",
+    "@backstage/plugin-auth-node": "0.1.0",
+    "@backstage/plugin-catalog-node": "1.13.0",
+    "@backstage/plugin-catalog-unprocessed-entities-common": "0.0.1",
+    "@backstage/plugin-permission-common": "0.1.0",
     "express-promise-router": "^4.1.1",
     "knex": "^3.0.0"
   },
