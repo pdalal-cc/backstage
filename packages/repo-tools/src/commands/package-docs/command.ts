@@ -22,7 +22,7 @@ import pLimit from 'p-limit';
 import { mkdirp } from 'fs-extra';
 import { PackageDocsCache } from './Cache';
 import { Lockfile } from '@backstage/cli-node';
-import { glob } from 'glob';
+import { globSync } from 'glob';
 import { existsSync } from 'node:fs';
 
 const limit = pLimit(8);
@@ -116,7 +116,7 @@ async function generateDocJson(pkg: string) {
 export default async function packageDocs(paths: string[] = [], opts: any) {
   console.warn('!!! This is an experimental command !!!');
 
-  const existingDocsJsonPaths = glob.sync(
+  const existingDocsJsonPaths = globSync(
     cliPaths.resolveTargetRoot('dist-types/**/docs.json'),
   );
   if (existingDocsJsonPaths.length > 0) {

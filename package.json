@@ -117,7 +117,11 @@
     "csstype@npm:^3.0.2": "3.0.9",
     "csstype@npm:^3.1.2": "3.0.9",
     "csstype@npm:^3.1.3": "3.0.9",
-    "recast@npm:0.23.9>ast-types": "patch:ast-types@npm%3A0.16.1#./.yarn/patches/ast-types-npm-0.16.1-43c4ac4b0d.patch"
+    "recast@npm:0.23.9>ast-types": "patch:ast-types@npm%3A0.16.1#./.yarn/patches/ast-types-npm-0.16.1-43c4ac4b0d.patch",
+    "react-router@npm:6.0.0-beta.0": "6.30.2",
+    "react-router@npm:^6.3.0": "6.30.2",
+    "react-router-dom@npm:6.0.0-beta.0": "6.30.2",
+    "webpack@npm:~5.103.0": "5.104.0"
   },
   "dependencies": {
     "@backstage/errors": "workspace:^",
@@ -146,7 +150,6 @@
     "@storybook/addon-vitest": "^10.3.0-alpha.1",
     "@storybook/react-vite": "^10.3.0-alpha.1",
     "@techdocs/cli": "workspace:*",
-    "@types/cacheable-request": "^8.3.6",
     "@types/jest": "^30",
     "@types/jsdom": "^27",
     "@types/memjs": "^1.3.3",
