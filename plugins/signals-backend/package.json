@@ -38,9 +38,9 @@
   },
   "dependencies": {
     "@backstage/backend-plugin-api": "^1.6.1",
-    "@backstage/config": "workspace:^",
+    "@backstage/config": "0.1.1",
     "@backstage/plugin-events-node": "workspace:^",
-    "@backstage/plugin-signals-node": "workspace:^",
+    "@backstage/plugin-signals-node": "0.0.1",
     "@backstage/types": "^0.1.1",
     "express": "^4.22.0",
     "express-promise-router": "^4.1.0",
