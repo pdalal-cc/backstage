@@ -56,10 +56,10 @@
     "test": "backstage-cli package test"
   },
   "dependencies": {
-    "@backstage/core-components": "workspace:^",
-    "@backstage/core-plugin-api": "workspace:^",
+    "@backstage/core-components": "0.1.0",
+    "@backstage/core-plugin-api": "0.1.0",
     "@backstage/frontend-plugin-api": "workspace:^",
-    "@backstage/plugin-search-common": "workspace:^",
+    "@backstage/plugin-search-common": "0.3.1",
     "@backstage/theme": "workspace:^",
     "@backstage/types": "^0.1.1",
     "@backstage/version-bridge": "workspace:^",
