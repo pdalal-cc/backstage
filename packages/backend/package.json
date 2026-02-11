@@ -39,7 +39,7 @@
     "@backstage/plugin-auth-backend-module-guest-provider": "workspace:^",
     "@backstage/plugin-auth-backend-module-openshift-provider": "workspace:^",
     "@backstage/plugin-auth-node": "workspace:^",
-    "@backstage/plugin-catalog-backend": "workspace:^",
+    "@backstage/plugin-catalog-backend": "0.1.1",
     "@backstage/plugin-catalog-backend-module-backstage-openapi": "workspace:^",
     "@backstage/plugin-catalog-backend-module-openapi": "workspace:^",
     "@backstage/plugin-catalog-backend-module-scaffolder-entity-model": "workspace:^",
