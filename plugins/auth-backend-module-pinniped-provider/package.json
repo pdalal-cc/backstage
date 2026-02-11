@@ -34,7 +34,7 @@
   },
   "dependencies": {
     "@backstage/backend-plugin-api": "^1.6.1",
-    "@backstage/config": "workspace:^",
+    "@backstage/config": "0.1.1",
     "@backstage/plugin-auth-node": "^0.1.0",
     "@backstage/types": "^0.1.1",
     "luxon": "^3.4.3",
