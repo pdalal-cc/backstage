@@ -43,10 +43,10 @@
   },
   "dependencies": {
     "@backstage/backend-plugin-api": "^1.6.1",
-    "@backstage/config": "workspace:^",
+    "@backstage/config": "0.1.1",
     "@backstage/errors": "^0.1.1",
     "@backstage/integration": "^0.1.0",
-    "@backstage/plugin-scaffolder-node": "workspace:^",
+    "@backstage/plugin-scaffolder-node": "0.1.0",
     "fs-extra": "^11.2.0",
     "yaml": "^2.0.0"
   },
