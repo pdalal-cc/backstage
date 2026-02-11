@@ -49,12 +49,12 @@
     "test": "backstage-cli package test"
   },
   "dependencies": {
-    "@backstage/backend-plugin-api": "workspace:^",
-    "@backstage/catalog-model": "workspace:^",
+    "@backstage/backend-plugin-api": "^1.6.1",
+    "@backstage/catalog-model": "^0.1.1",
     "@backstage/config": "workspace:^",
-    "@backstage/errors": "workspace:^",
-    "@backstage/plugin-catalog-node": "workspace:^",
-    "@backstage/types": "workspace:^",
+    "@backstage/errors": "^0.1.1",
+    "@backstage/plugin-catalog-node": "^1.13.0",
+    "@backstage/types": "^0.1.1",
     "lodash": "^4.17.21",
     "uuid": "^11.0.0"
   },

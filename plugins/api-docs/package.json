@@ -54,7 +54,7 @@
   },
   "dependencies": {
     "@asyncapi/react-component": "^2.3.3",
-    "@backstage/catalog-model": "workspace:^",
+    "@backstage/catalog-model": "^0.1.1",
     "@backstage/core-components": "workspace:^",
     "@backstage/core-plugin-api": "workspace:^",
     "@backstage/frontend-plugin-api": "workspace:^",

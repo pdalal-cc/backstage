@@ -48,7 +48,7 @@
   },
   "dependencies": {
     "@backstage/core-components": "workspace:^",
-    "@backstage/errors": "workspace:^",
+    "@backstage/errors": "^0.1.1",
     "@backstage/frontend-plugin-api": "workspace:^",
     "@backstage/theme": "workspace:^",
     "@material-ui/core": "^4.12.2",

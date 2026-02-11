@@ -48,13 +48,13 @@
     "test": "backstage-cli package test"
   },
   "dependencies": {
-    "@backstage/backend-defaults": "workspace:^",
-    "@backstage/backend-plugin-api": "workspace:^",
-    "@backstage/errors": "workspace:^",
-    "@backstage/plugin-auth-node": "workspace:^",
+    "@backstage/backend-defaults": "^0.12.2",
+    "@backstage/backend-plugin-api": "^1.6.1",
+    "@backstage/errors": "^0.1.1",
+    "@backstage/plugin-auth-node": "^0.1.0",
     "@backstage/plugin-signals-node": "workspace:^",
     "@backstage/plugin-user-settings-common": "workspace:^",
-    "@backstage/types": "workspace:^",
+    "@backstage/types": "^0.1.1",
     "already": "^2.2.1",
     "express": "^4.22.0",
     "express-promise-router": "^4.1.0",
@@ -63,7 +63,7 @@
     "zod": "^3.25.76"
   },
   "devDependencies": {
-    "@backstage/backend-defaults": "workspace:^",
+    "@backstage/backend-defaults": "^0.12.2",
     "@backstage/backend-test-utils": "workspace:^",
     "@backstage/cli": "workspace:^",
     "@types/express": "^4.17.6",

@@ -53,9 +53,9 @@
     "test": "backstage-cli package test"
   },
   "dependencies": {
-    "@backstage/backend-plugin-api": "workspace:^",
+    "@backstage/backend-plugin-api": "^1.6.1",
     "@backstage/config": "workspace:^",
-    "@backstage/errors": "workspace:^",
+    "@backstage/errors": "^0.1.1",
     "@backstage/plugin-permission-common": "workspace:^",
     "@backstage/plugin-search-common": "workspace:^",
     "@types/lunr": "^2.3.3",
@@ -65,7 +65,7 @@
     "uuid": "^11.0.0"
   },
   "devDependencies": {
-    "@backstage/backend-defaults": "workspace:^",
+    "@backstage/backend-defaults": "^0.12.2",
     "@backstage/backend-test-utils": "workspace:^",
     "@backstage/cli": "workspace:^",
     "@types/ndjson": "^2.0.1"

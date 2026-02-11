@@ -53,7 +53,7 @@
   "dependencies": {
     "@backstage/core-components": "workspace:^",
     "@backstage/core-plugin-api": "workspace:^",
-    "@backstage/errors": "workspace:^",
+    "@backstage/errors": "^0.1.1",
     "@backstage/frontend-plugin-api": "workspace:^",
     "@backstage/plugin-notifications-common": "workspace:^",
     "@backstage/plugin-signals-react": "workspace:^",

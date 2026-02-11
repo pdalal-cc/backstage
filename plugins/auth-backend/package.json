@@ -44,13 +44,13 @@
     "test": "backstage-cli package test"
   },
   "dependencies": {
-    "@backstage/backend-plugin-api": "workspace:^",
-    "@backstage/catalog-model": "workspace:^",
+    "@backstage/backend-plugin-api": "^1.6.1",
+    "@backstage/catalog-model": "^0.1.1",
     "@backstage/config": "workspace:^",
-    "@backstage/errors": "workspace:^",
-    "@backstage/plugin-auth-node": "workspace:^",
-    "@backstage/plugin-catalog-node": "workspace:^",
-    "@backstage/types": "workspace:^",
+    "@backstage/errors": "^0.1.1",
+    "@backstage/plugin-auth-node": "^0.1.0",
+    "@backstage/plugin-catalog-node": "^1.13.0",
+    "@backstage/types": "^0.1.1",
     "@google-cloud/firestore": "^7.0.0",
     "connect-session-knex": "^4.0.0",
     "cookie-parser": "^1.4.5",
@@ -67,7 +67,7 @@
     "uuid": "^11.0.0"
   },
   "devDependencies": {
-    "@backstage/backend-defaults": "workspace:^",
+    "@backstage/backend-defaults": "^0.12.2",
     "@backstage/backend-test-utils": "workspace:^",
     "@backstage/cli": "workspace:^",
     "@backstage/plugin-auth-backend-module-google-provider": "workspace:^",
