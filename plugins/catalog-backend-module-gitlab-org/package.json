@@ -36,7 +36,7 @@
     "@backstage/backend-plugin-api": "^1.6.1",
     "@backstage/plugin-catalog-backend-module-gitlab": "workspace:^",
     "@backstage/plugin-catalog-node": "^1.13.0",
-    "@backstage/plugin-events-node": "workspace:^"
+    "@backstage/plugin-events-node": "0.1.0"
   },
   "devDependencies": {
     "@backstage/backend-test-utils": "workspace:^",
