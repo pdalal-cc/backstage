@@ -50,8 +50,8 @@
   },
   "dependencies": {
     "@backstage/backend-plugin-api": "^1.6.1",
-    "@backstage/catalog-model": "^0.1.1",
-    "@backstage/config": "workspace:^",
+    "@backstage/catalog-model": "^1.2.0",
+    "@backstage/config": "0.1.1",
     "@backstage/errors": "^0.1.1",
     "@backstage/plugin-catalog-node": "^1.13.0",
     "@backstage/types": "^0.1.1",
