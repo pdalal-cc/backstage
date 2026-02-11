@@ -38,8 +38,8 @@
   },
   "dependencies": {
     "@backstage/backend-plugin-api": "^1.6.1",
-    "@backstage/config": "workspace:^",
-    "@backstage/plugin-auth-node": "^0.1.0",
+    "@backstage/config": "0.1.1",
+    "@backstage/plugin-auth-node": "^0.6.0",
     "@backstage/plugin-events-node": "workspace:^",
     "@backstage/types": "^0.1.1",
     "express": "^4.22.0",
