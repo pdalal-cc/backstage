@@ -38,10 +38,10 @@
   },
   "dependencies": {
     "@backstage/backend-plugin-api": "^1.6.1",
-    "@backstage/catalog-client": "workspace:^",
+    "@backstage/catalog-client": "0.2.0",
     "@backstage/catalog-model": "^0.1.1",
-    "@backstage/plugin-notifications-common": "workspace:^",
-    "@backstage/plugin-signals-node": "workspace:^",
+    "@backstage/plugin-notifications-common": "0.0.1",
+    "@backstage/plugin-signals-node": "0.0.1",
     "knex": "^3.0.0",
     "uuid": "^11.0.0"
   },
