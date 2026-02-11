@@ -14,12 +14,9 @@
  * limitations under the License.
  */
 
-import {
-  Entity,
-  entityKindSchemaValidator,
-  KindValidator,
-} from '@backstage/catalog-model';
+import { Entity, KindValidator } from '@backstage/catalog-model';
 import { JsonObject } from '@backstage/types';
+import { entityKindSchemaValidator } from './entityKindSchemaValidator';
 import schema from './Template.v1beta3.schema.json';
 
 /**

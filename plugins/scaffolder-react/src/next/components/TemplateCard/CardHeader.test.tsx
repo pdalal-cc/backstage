@@ -29,7 +29,7 @@ import {
 } from '@backstage/plugin-catalog-react';
 import { DefaultStarredEntitiesApi } from '@backstage/plugin-catalog';
 import Observable from 'zen-observable';
-import { stringifyEntityRef } from '@backstage/catalog-model';
+import { serializeEntityRef } from '@backstage/catalog-model';
 import { TemplateEntityV1beta3 } from '@backstage/plugin-scaffolder-common';
 
 const mountedRoutes = {
@@ -136,7 +136,7 @@ describe('CardHeader', () => {
     await fireEvent.click(favorite);
 
     expect(starredEntitiesApi.toggleStarred).toHaveBeenCalledWith(
-      stringifyEntityRef(mockTemplate),
+      serializeEntityRef(mockTemplate),
     );
   });
 

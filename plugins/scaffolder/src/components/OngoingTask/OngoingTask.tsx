@@ -56,7 +56,7 @@ import { useTranslationRef } from '@backstage/core-plugin-api/alpha';
 import { scaffolderTranslationRef } from '../../translation';
 import { entityPresentationApiRef } from '@backstage/plugin-catalog-react';
 import { default as reactUseAsync } from 'react-use/esm/useAsync';
-import { stringifyEntityRef } from '@backstage/catalog-model';
+import { serializeEntityRef } from '@backstage/catalog-model';
 
 const useStyles = makeStyles(theme => ({
   contentWrapper: {
@@ -98,7 +98,7 @@ export const OngoingTask = (props: {
       attributes={{
         entityRef:
           name &&
-          stringifyEntityRef({
+          serializeEntityRef({
             kind: 'template',
             namespace,
             name,

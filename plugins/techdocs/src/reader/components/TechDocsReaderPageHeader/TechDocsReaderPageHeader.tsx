@@ -37,7 +37,7 @@ import {
 import {
   RELATION_OWNED_BY,
   CompoundEntityRef,
-  stringifyEntityRef,
+  serializeEntityRef,
 } from '@backstage/catalog-model';
 import { Header, HeaderLabel } from '@backstage/core-components';
 import { useRouteRef, configApiRef, useApi } from '@backstage/core-plugin-api';
@@ -165,7 +165,7 @@ export const TechDocsReaderPageHeader = (
   const noTdMetadata = !metadataLoading && metadata === undefined;
   if (noEntMetadata || noTdMetadata) return null;
 
-  const stringEntityRef = stringifyEntityRef(entityRef);
+  const stringEntityRef = serializeEntityRef(entityRef);
 
   const entityDisplayName =
     entityPresentationApi.forEntity(stringEntityRef).snapshot.primaryTitle;

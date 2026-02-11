@@ -16,10 +16,7 @@
 import { ComponentType, useCallback, useState } from 'react';
 import { Navigate, useNavigate } from 'react-router-dom';
 import useAsync from 'react-use/esm/useAsync';
-import {
-  stringifyEntityRef,
-  ANNOTATION_EDIT_URL,
-} from '@backstage/catalog-model';
+import { serializeEntityRef } from '@backstage/catalog-model';
 import {
   AnalyticsContext,
   useApi,
@@ -84,7 +81,7 @@ export const TemplateWizardPage = (props: TemplateWizardPageProps) => {
   );
   const { t } = useTranslationRef(scaffolderTranslationRef);
 
-  const templateRef = stringifyEntityRef({
+  const templateRef = serializeEntityRef({
     kind: 'Template',
     namespace,
     name: templateName,
@@ -95,7 +92,7 @@ export const TemplateWizardPage = (props: TemplateWizardPageProps) => {
 
   const { value: editUrl } = useAsync(async () => {
     const data = await catalogApi.getEntityByRef(templateRef);
-    return data?.metadata.annotations?.[ANNOTATION_EDIT_URL];
+    return data?.metadata.annotations?.['backstage.io/edit-url'];
   }, [templateRef, catalogApi]);
 
   const onCreate = useCallback(

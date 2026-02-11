@@ -31,6 +31,9 @@ export * from './gerrit';
 export * from './gitea';
 export * from './github';
 export * from './gitlab';
+// Explicit re-exports for ESM/bundler resolution
+export { replaceGithubUrlType } from './github';
+export { replaceGitLabUrlType } from './gitlab';
 export * from './googleGcs';
 export * from './harness';
 export { defaultScmResolveUrl } from './helpers';

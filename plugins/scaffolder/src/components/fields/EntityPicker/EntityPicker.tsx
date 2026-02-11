@@ -20,7 +20,7 @@ import {
 import {
   Entity,
   parseEntityRef,
-  stringifyEntityRef,
+  serializeEntityRef,
 } from '@backstage/catalog-model';
 import { useApi } from '@backstage/core-plugin-api';
 import {
@@ -103,7 +103,7 @@ export const EntityPicker = (props: EntityPickerProps) => {
         items.map(async item => {
           const presentation = await entityPresentationApi.forEntity(item)
             .promise;
-          return [stringifyEntityRef(item), presentation] as [
+          return [serializeEntityRef(item), presentation] as [
             string,
             EntityRefPresentationSnapshot,
           ];
@@ -126,7 +126,7 @@ export const EntityPicker = (props: EntityPickerProps) => {
           defaultNamespace,
         });
 
-        return stringifyEntityRef(parsedRef);
+        return serializeEntityRef(parsedRef);
       } catch (err) {
         return freeSoloValue;
       }
@@ -139,14 +139,14 @@ export const EntityPicker = (props: EntityPickerProps) => {
       // ref can either be a string from free solo entry or
       if (typeof ref !== 'string') {
         // if ref does not exist: pass 'undefined' to trigger validation for required value
-        onChange(ref ? stringifyEntityRef(ref as Entity) : undefined);
+        onChange(ref ? serializeEntityRef(ref as Entity) : undefined);
       } else {
         if (reason === 'blur' || reason === 'create-option') {
           // Add in default namespace, etc.
           let entityRef = ref;
           try {
             // Attempt to parse the entity ref into it's full form.
-            entityRef = stringifyEntityRef(
+            entityRef = serializeEntityRef(
               parseEntityRef(ref as string, {
                 defaultKind,
                 defaultNamespace,
@@ -168,7 +168,7 @@ export const EntityPicker = (props: EntityPickerProps) => {
   // Since free solo can be enabled, attempt to parse as a full entity ref first, then fall
   // back to the given value.
   const selectedEntity =
-    entities?.catalogEntities.find(e => stringifyEntityRef(e) === formData) ??
+    entities?.catalogEntities.find(e => serializeEntityRef(e) === formData) ??
     (allowArbitraryValues && formData ? getLabel(formData) : '');
 
   useEffect(() => {
@@ -178,7 +178,7 @@ export const EntityPicker = (props: EntityPickerProps) => {
       entities?.catalogEntities.length === 1 &&
       selectedEntity === ''
     ) {
-      onChange(stringifyEntityRef(entities.catalogEntities[0]));
+      onChange(serializeEntityRef(entities.catalogEntities[0]));
     }
   }, [entities, onChange, selectedEntity, required, allowArbitraryValues]);
 
@@ -206,7 +206,7 @@ export const EntityPicker = (props: EntityPickerProps) => {
           // option can be a string due to freeSolo.
           typeof option === 'string'
             ? option
-            : entities?.entityRefToPresentation.get(stringifyEntityRef(option))
+            : entities?.entityRefToPresentation.get(serializeEntityRef(option))
                 ?.entityRef!
         }
         autoSelect
@@ -225,7 +225,7 @@ export const EntityPicker = (props: EntityPickerProps) => {
         renderOption={option => <EntityDisplayName entityRef={option} />}
         filterOptions={createFilterOptions<Entity>({
           stringify: option =>
-            entities?.entityRefToPresentation.get(stringifyEntityRef(option))
+            entities?.entityRefToPresentation.get(serializeEntityRef(option))
               ?.primaryTitle!,
         })}
         ListboxComponent={VirtualizedListbox}

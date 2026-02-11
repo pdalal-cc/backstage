@@ -17,10 +17,6 @@
 import parseGitUrl from 'git-url-parse';
 
 import { configApiRef, useApi } from '@backstage/core-plugin-api';
-import {
-  replaceGithubUrlType,
-  replaceGitLabUrlType,
-} from '@backstage/integration';
 import { scmIntegrationsApiRef } from '@backstage/integration-react';
 import {
   useShadowRootElements,
@@ -28,6 +24,25 @@ import {
 } from '@backstage/plugin-techdocs-react';
 
 import { PAGE_EDIT_LINK_SELECTOR } from './constants';
+
+/** Local helper when @backstage/integration does not export replaceGithubUrlType */
+function replaceGithubUrlType(
+  url: string,
+  type: 'blob' | 'tree' | 'edit',
+): string {
+  return url.replace(
+    /\/\/([^/]+)\/([^/]+)\/([^/]+)\/(blob|tree|edit)\//,
+    (_, host, owner, repo) => `//${host}/${owner}/${repo}/${type}/`,
+  );
+}
+
+/** Local helper when @backstage/integration does not export replaceGitLabUrlType */
+function replaceGitLabUrlType(
+  url: string,
+  type: 'blob' | 'tree' | 'edit',
+): string {
+  return url.replace(/\/\-\/(blob|tree|edit)\//, `/-/${type}/`);
+}
 
 const resolveBlobUrl = (url: string, type: string) => {
   if (type === 'github') {

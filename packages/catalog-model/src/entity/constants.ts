@@ -22,6 +22,13 @@
 export const DEFAULT_NAMESPACE = 'default';
 
 /**
+ * The namespace that entities without an explicit namespace fall into.
+ * @public
+ * @deprecated Use `DEFAULT_NAMESPACE` instead.
+ */
+export const ENTITY_DEFAULT_NAMESPACE = DEFAULT_NAMESPACE;
+
+/**
  * Annotation for linking to entity page from catalog pages.
  *
  * @public

@@ -52,7 +52,7 @@ import {
   templatingExtensionsRouteRef,
   viewTechDocRouteRef,
 } from '../../../routes';
-import { parseEntityRef, stringifyEntityRef } from '@backstage/catalog-model';
+import { parseEntityRef, serializeEntityRef } from '@backstage/catalog-model';
 import { TemplateGroupFilter } from '@backstage/plugin-scaffolder-react';
 import {
   TranslationFunction,
@@ -177,7 +177,7 @@ export const TemplateListPage = (props: TemplateListPageProps) => {
 
   const onTemplateSelected = useCallback(
     (template: TemplateEntityV1beta3) => {
-      const { namespace, name } = parseEntityRef(stringifyEntityRef(template));
+      const { namespace, name } = parseEntityRef(serializeEntityRef(template));
 
       navigate(templateRoute({ namespace, templateName: name }));
     },

@@ -20,7 +20,7 @@ import {
   ContentHeader,
   ItemCardGrid,
 } from '@backstage/core-components';
-import { stringifyEntityRef } from '@backstage/catalog-model';
+import { serializeEntityRef } from '@backstage/catalog-model';
 import { TemplateCardProps, TemplateCard } from '../TemplateCard';
 import { AnalyticsContext, IconComponent } from '@backstage/core-plugin-api';
 
@@ -71,9 +71,9 @@ export const TemplateGroup = (props: TemplateGroupProps) => {
         {templates.map(({ template, additionalLinks }) => (
           <AnalyticsContext
             attributes={{
-              entityRef: stringifyEntityRef(template),
+              entityRef: serializeEntityRef(template),
             }}
-            key={stringifyEntityRef(template)}
+            key={serializeEntityRef(template)}
           >
             <Card
               additionalLinks={additionalLinks}

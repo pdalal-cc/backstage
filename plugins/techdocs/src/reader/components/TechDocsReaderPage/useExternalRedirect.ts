@@ -21,7 +21,7 @@ import { useApi, useRouteRef } from '@backstage/core-plugin-api';
 import { catalogApiRef } from '@backstage/plugin-catalog-react';
 import {
   CompoundEntityRef,
-  stringifyEntityRef,
+  serializeEntityRef,
 } from '@backstage/catalog-model';
 import { buildTechDocsURL } from '@backstage/plugin-techdocs-react';
 import { TECHDOCS_EXTERNAL_ANNOTATION } from '@backstage/plugin-techdocs-common';
@@ -48,7 +48,7 @@ export function useExternalRedirect(entityRef: CompoundEntityRef): {
   // Create a stable string key for the entity to use as a dependency.
   // This ensures the useAsync hook only re-runs when the entity changes,
   // preventing redundant API calls during sub-page navigation within the same entity's documentation.
-  const entityKey = stringifyEntityRef(entityRef);
+  const entityKey = serializeEntityRef(entityRef);
   // Track which entity we've already checked to avoid redundant checks
   // when navigating between pages within the same entity's documentation.
   const checkedEntityRef = useRef<string | null>(null);

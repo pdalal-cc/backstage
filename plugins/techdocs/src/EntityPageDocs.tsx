@@ -16,7 +16,7 @@
 
 import {
   Entity,
-  getCompoundEntityRef,
+  ENTITY_DEFAULT_NAMESPACE,
   parseEntityRef,
 } from '@backstage/catalog-model';
 import { TECHDOCS_EXTERNAL_ANNOTATION } from '@backstage/plugin-techdocs-common';
@@ -39,7 +39,11 @@ export const EntityPageDocs = ({
   entity,
   withSearch = true,
 }: EntityPageDocsProps) => {
-  let entityRef = getCompoundEntityRef(entity);
+  let entityRef = {
+    kind: entity.kind,
+    namespace: entity.metadata.namespace ?? ENTITY_DEFAULT_NAMESPACE,
+    name: entity.metadata.name,
+  };
 
   const searchResultUrlMapper = useEntityPageTechDocsRedirect(entityRef);
 

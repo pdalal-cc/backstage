@@ -33,7 +33,7 @@ import {
 } from '@backstage/plugin-catalog-react';
 import { NotFoundError } from '@backstage/errors';
 import useAsync from 'react-use/esm/useAsync';
-import { Entity, stringifyEntityRef } from '@backstage/catalog-model';
+import { Entity, serializeEntityRef } from '@backstage/catalog-model';
 import { VirtualizedListbox } from '../VirtualizedListbox';
 import { useTranslationRef } from '@backstage/core-plugin-api/alpha';
 import { scaffolderTranslationRef } from '../../../translation';
@@ -85,7 +85,7 @@ export const MyGroupsPicker = (props: MyGroupsPickerProps) => {
         items.map(async item => {
           const presentation = await entityPresentationApi.forEntity(item)
             .promise;
-          return [stringifyEntityRef(item), presentation] as [
+          return [serializeEntityRef(item), presentation] as [
             string,
             EntityRefPresentationSnapshot,
           ];
@@ -97,16 +97,16 @@ export const MyGroupsPicker = (props: MyGroupsPickerProps) => {
   });
 
   const updateChange = (_: ChangeEvent<{}>, value: Entity | null) => {
-    onChange(value ? stringifyEntityRef(value) : '');
+    onChange(value ? serializeEntityRef(value) : '');
   };
 
   const selectedEntity =
-    groups?.catalogEntities.find(e => stringifyEntityRef(e) === formData) ||
+    groups?.catalogEntities.find(e => serializeEntityRef(e) === formData) ||
     null;
 
   useEffect(() => {
     if (required && groups?.catalogEntities.length === 1 && !selectedEntity) {
-      onChange(stringifyEntityRef(groups.catalogEntities[0]));
+      onChange(serializeEntityRef(groups.catalogEntities[0]));
     }
   }, [groups, onChange, selectedEntity, required]);
 
@@ -126,7 +126,7 @@ export const MyGroupsPicker = (props: MyGroupsPickerProps) => {
         loading={loading}
         onChange={updateChange}
         getOptionLabel={option =>
-          groups?.entityRefToPresentation.get(stringifyEntityRef(option))
+          groups?.entityRefToPresentation.get(serializeEntityRef(option))
             ?.primaryTitle!
         }
         autoSelect
@@ -144,7 +144,7 @@ export const MyGroupsPicker = (props: MyGroupsPickerProps) => {
         renderOption={option => <EntityDisplayName entityRef={option} />}
         filterOptions={createFilterOptions<Entity>({
           stringify: option =>
-            groups?.entityRefToPresentation.get(stringifyEntityRef(option))
+            groups?.entityRefToPresentation.get(serializeEntityRef(option))
               ?.primaryTitle!,
         })}
         ListboxComponent={VirtualizedListbox}

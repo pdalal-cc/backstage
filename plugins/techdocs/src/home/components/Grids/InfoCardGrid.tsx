@@ -15,7 +15,7 @@
  */
 
 import useAsync from 'react-use/esm/useAsync';
-import { Entity, stringifyEntityRef } from '@backstage/catalog-model';
+import { Entity, serializeEntityRef } from '@backstage/catalog-model';
 import { useApi, useRouteRef, configApiRef } from '@backstage/core-plugin-api';
 import {
   ItemCardGrid,
@@ -87,7 +87,7 @@ export const InfoCardGrid = (props: InfoCardGridProps) => {
         entities?.map(async entity => {
           const presentation = await entityPresentationApi.forEntity(entity)
             .promise;
-          return [stringifyEntityRef(entity), presentation] as [
+          return [serializeEntityRef(entity), presentation] as [
             string,
             EntityRefPresentationSnapshot,
           ];
@@ -104,7 +104,7 @@ export const InfoCardGrid = (props: InfoCardGridProps) => {
           key={entity.metadata.name}
           data-testid={entity?.metadata?.title}
           title={
-            entityRefToPresentation?.get(stringifyEntityRef(entity))
+            entityRefToPresentation?.get(serializeEntityRef(entity))
               ?.primaryTitle
           }
         >

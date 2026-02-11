@@ -22,5 +22,6 @@ export * from './policies';
 export {
   getCompoundEntityRef,
   parseEntityRef,
+  serializeEntityRef,
   stringifyEntityRef,
 } from './ref';

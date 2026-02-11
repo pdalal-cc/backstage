@@ -15,14 +15,22 @@
  */
 
 import type { Transformer } from './transformer';
-import {
-  replaceGithubUrlType,
-  ScmIntegrationRegistry,
-} from '@backstage/integration';
+import { ScmIntegrationRegistry } from '@backstage/integration';
 import FeedbackOutlinedIcon from '@material-ui/icons/FeedbackOutlined';
 import { createElement } from 'react';
 import parseGitUrl from 'git-url-parse';
 import { renderReactElement } from './renderReactElement';
+
+/** Local helper when @backstage/integration does not export replaceGithubUrlType */
+function replaceGithubUrlType(
+  url: string,
+  type: 'blob' | 'tree' | 'edit',
+): string {
+  return url.replace(
+    /\/\/([^/]+)\/([^/]+)\/([^/]+)\/(blob|tree|edit)\//,
+    (_, host, owner, repo) => `//${host}/${owner}/${repo}/${type}/`,
+  );
+}
 
 // requires repo
 export const addGitFeedbackLink = (

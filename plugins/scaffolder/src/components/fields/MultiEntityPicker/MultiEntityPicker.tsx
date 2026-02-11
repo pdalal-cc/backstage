@@ -20,7 +20,7 @@ import {
 import {
   Entity,
   parseEntityRef,
-  stringifyEntityRef,
+  serializeEntityRef,
 } from '@backstage/catalog-model';
 import { useApi } from '@backstage/core-plugin-api';
 import {
@@ -97,7 +97,7 @@ export const MultiEntityPicker = (props: MultiEntityPickerProps) => {
         items.map(async item => {
           const presentation = await entityPresentationApi.forEntity(item)
             .promise;
-          return [stringifyEntityRef(item), presentation] as [
+          return [serializeEntityRef(item), presentation] as [
             string,
             EntityRefPresentationSnapshot,
           ];
@@ -119,14 +119,14 @@ export const MultiEntityPicker = (props: MultiEntityPickerProps) => {
           // If the ref is not a string, then it was a selected option in the picker
           if (typeof ref !== 'string') {
             // if ref does not exist: pass 'undefined' to trigger validation for required value
-            return ref ? stringifyEntityRef(ref as Entity) : undefined;
+            return ref ? serializeEntityRef(ref as Entity) : undefined;
           }
 
           // Add in default namespace, etc.
           let entityRef = ref;
           try {
             // Attempt to parse the entity ref into it's full form.
-            entityRef = stringifyEntityRef(
+            entityRef = serializeEntityRef(
               parseEntityRef(ref as string, {
                 defaultKind,
                 defaultNamespace,
@@ -158,7 +158,7 @@ export const MultiEntityPicker = (props: MultiEntityPickerProps) => {
 
   useEffect(() => {
     if (required && !allowArbitraryValues && entities?.entities?.length === 1) {
-      onChange([stringifyEntityRef(entities?.entities[0])]);
+      onChange([serializeEntityRef(entities?.entities[0])]);
     }
   }, [entities, onChange, required, allowArbitraryValues]);
 
@@ -189,7 +189,7 @@ export const MultiEntityPicker = (props: MultiEntityPickerProps) => {
           // option can be a string due to freeSolo.
           typeof option === 'string'
             ? option
-            : entities?.entityRefToPresentation.get(stringifyEntityRef(option))
+            : entities?.entityRefToPresentation.get(serializeEntityRef(option))
                 ?.entityRef!
         }
         getOptionDisabled={_options =>
@@ -217,7 +217,7 @@ export const MultiEntityPicker = (props: MultiEntityPickerProps) => {
         )}
         filterOptions={createFilterOptions<Entity>({
           stringify: option =>
-            entities?.entityRefToPresentation.get(stringifyEntityRef(option))
+            entities?.entityRefToPresentation.get(serializeEntityRef(option))
               ?.primaryTitle!,
         })}
         ListboxComponent={VirtualizedListbox}

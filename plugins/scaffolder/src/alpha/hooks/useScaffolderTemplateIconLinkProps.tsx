@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-import { DEFAULT_NAMESPACE } from '@backstage/catalog-model';
+import { ENTITY_DEFAULT_NAMESPACE } from '@backstage/catalog-model';
 import { useApp, useRouteRef } from '@backstage/core-plugin-api';
 import { useEntity } from '@backstage/plugin-catalog-react';
 
@@ -47,7 +47,7 @@ export function useScaffolderTemplateIconLinkProps() {
       templateRoute &&
       templateRoute({
         templateName: entity.metadata.name,
-        namespace: entity.metadata.namespace || DEFAULT_NAMESPACE,
+        namespace: entity.metadata.namespace || ENTITY_DEFAULT_NAMESPACE,
       }),
   };
 }

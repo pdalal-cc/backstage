@@ -29,7 +29,8 @@ import {
 } from '@backstage/plugin-scaffolder-react';
 import { TemplateWizardPage } from './TemplateWizardPage';
 import { rootRouteRef } from '../../../routes';
-import { ANNOTATION_EDIT_URL } from '@backstage/catalog-model';
+
+const ANNOTATION_EDIT_URL = 'backstage.io/edit-url';
 import { catalogApiRef } from '@backstage/plugin-catalog-react';
 import { catalogApiMock } from '@backstage/plugin-catalog-react/testUtils';
 import { ScaffolderFormDecoratorsApi } from '../../api/types';

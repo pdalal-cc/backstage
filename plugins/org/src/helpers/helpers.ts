@@ -16,11 +16,11 @@
 
 import {
   CompoundEntityRef,
-  DEFAULT_NAMESPACE,
   Entity,
+  ENTITY_DEFAULT_NAMESPACE,
   GroupEntity,
   RELATION_PARENT_OF,
-  stringifyEntityRef,
+  serializeEntityRef,
   UserEntity,
 } from '@backstage/catalog-model';
 import {
@@ -41,7 +41,7 @@ export const getMembersFromGroups = async (
             kind: 'User',
             [`relations.${relationship.toLocaleLowerCase('en-US')}`]:
               groups.map(group =>
-                stringifyEntityRef({
+                serializeEntityRef({
                   kind: 'group',
                   namespace: group.namespace.toLocaleLowerCase('en-US'),
                   name: group.name.toLocaleLowerCase('en-US'),
@@ -60,7 +60,7 @@ export const getDescendantGroupsFromGroup = async (
   const alreadyQueuedOrExpandedGroupNames = new Map<string, boolean>();
   const groupRef: CompoundEntityRef = {
     kind: group.kind,
-    namespace: group.metadata.namespace ?? DEFAULT_NAMESPACE,
+    namespace: group.metadata.namespace ?? ENTITY_DEFAULT_NAMESPACE,
     name: group.metadata.name,
   };
 
@@ -72,7 +72,7 @@ export const getDescendantGroupsFromGroup = async (
     const activeGroupRef = groupQueue.shift() as CompoundEntityRef;
     const activeGroup = await catalogApi.getEntityByRef(activeGroupRef);
     alreadyQueuedOrExpandedGroupNames.set(
-      stringifyEntityRef(activeGroupRef),
+      serializeEntityRef(activeGroupRef),
       true,
     );
 
@@ -81,12 +81,12 @@ export const getDescendantGroupsFromGroup = async (
     }).filter(
       currentGroup =>
         !alreadyQueuedOrExpandedGroupNames.has(
-          stringifyEntityRef(currentGroup),
+          serializeEntityRef(currentGroup),
         ),
     );
     childGroups.forEach(childGroup =>
       alreadyQueuedOrExpandedGroupNames.set(
-        stringifyEntityRef(childGroup),
+        serializeEntityRef(childGroup),
         true,
       ),
     );
@@ -113,7 +113,7 @@ export const removeDuplicateEntitiesFrom = (entityArray: Entity[]) => {
   const seenEntities = new Map<string, boolean>();
 
   return entityArray.filter(entity => {
-    const stringifiedEntity = stringifyEntityRef(entity);
+    const stringifiedEntity = serializeEntityRef(entity);
     const isDuplicate = seenEntities.has(stringifiedEntity);
 
     seenEntities.set(stringifiedEntity, true);

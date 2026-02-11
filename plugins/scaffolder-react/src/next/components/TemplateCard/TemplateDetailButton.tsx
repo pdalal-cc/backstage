@@ -23,7 +23,7 @@ import {
   entityRouteRef,
 } from '@backstage/plugin-catalog-react';
 import { useApp, useRouteRef } from '@backstage/core-plugin-api';
-import { Entity, stringifyEntityRef } from '@backstage/catalog-model';
+import { Entity, serializeEntityRef } from '@backstage/catalog-model';
 import { scaffolderReactTranslationRef } from '../../../translation';
 import { useTranslationRef } from '@backstage/frontend-plugin-api';
 
@@ -38,7 +38,7 @@ export const TemplateDetailButton = ({
 }: TemplateDetailButtonProps) => {
   const catalogEntityRoute = useRouteRef(entityRouteRef);
   const { t } = useTranslationRef(scaffolderReactTranslationRef);
-  const entityRef = stringifyEntityRef(template);
+  const entityRef = serializeEntityRef(template);
 
   const app = useApp();
   const TemplateIcon = app.getSystemIcon('kind:template') || DescriptionIcon;

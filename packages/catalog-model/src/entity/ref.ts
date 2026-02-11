@@ -158,3 +158,10 @@ export function stringifyEntityRef(
     'en-US',
   )}/${name.toLocaleLowerCase('en-US')}`;
 }
+
+/**
+ * Serializes an entity reference to string form.
+ * @public
+ * @deprecated Use `stringifyEntityRef` instead.
+ */
+export const serializeEntityRef = stringifyEntityRef;

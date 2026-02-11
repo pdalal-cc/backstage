@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-import { stringifyEntityRef } from '@backstage/catalog-model';
+import { serializeEntityRef } from '@backstage/catalog-model';
 import {
   Content,
   InfoCard,
@@ -79,7 +79,7 @@ export const Workflow = (workflowProps: WorkflowProps): JSX.Element | null => {
 
   const analytics = useAnalytics();
   const styles = useStyles();
-  const templateRef = stringifyEntityRef({
+  const templateRef = serializeEntityRef({
     kind: 'Template',
     namespace: namespace,
     name: templateName,

@@ -28,7 +28,7 @@ import useAsyncRetry from 'react-use/esm/useAsyncRetry';
 
 import {
   CompoundEntityRef,
-  stringifyEntityRef,
+  serializeEntityRef,
 } from '@backstage/catalog-model';
 import {
   createVersionedContext,
@@ -51,7 +51,7 @@ const areEntityRefsEqual = (
   nextEntityRef: CompoundEntityRef,
 ) => {
   return (
-    stringifyEntityRef(prevEntityRef) === stringifyEntityRef(nextEntityRef)
+    serializeEntityRef(prevEntityRef) === serializeEntityRef(nextEntityRef)
   );
 };
 
@@ -162,7 +162,7 @@ export const TechDocsReaderPageProvider = memo(
 
     return (
       <AnalyticsContext
-        attributes={{ entityRef: stringifyEntityRef(entityRef) }}
+        attributes={{ entityRef: serializeEntityRef(entityRef) }}
       >
         <TechDocsReaderPageContext.Provider value={versionedValue}>
           {children instanceof Function ? children(value) : children}
