@@ -44,11 +44,11 @@
   "dependencies": {
     "@backstage/backend-plugin-api": "^1.6.1",
     "@backstage/catalog-model": "^0.1.1",
-    "@backstage/config": "workspace:^",
+    "@backstage/config": "0.1.1",
     "@backstage/errors": "^0.1.1",
     "@backstage/integration": "^0.1.0",
     "@backstage/plugin-catalog-node": "^1.13.0",
-    "@backstage/plugin-scaffolder-node": "workspace:^",
+    "@backstage/plugin-scaffolder-node": "0.1.0",
     "@backstage/types": "^0.1.1",
     "@octokit/webhooks": "^10.9.2",
     "libsodium-wrappers": "^0.7.11",
