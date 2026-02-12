@@ -59,7 +59,7 @@
     "@backstage/plugin-app-node": "workspace:^",
     "@backstage/plugin-auth-node": "workspace:^",
     "@backstage/plugin-catalog-backend": "workspace:^",
-    "@backstage/plugin-events-backend": "workspace:^",
+    "@backstage/plugin-events-backend": "0.1.0",
     "@backstage/plugin-events-node": "workspace:^",
     "@backstage/plugin-permission-common": "workspace:^",
     "@backstage/plugin-permission-node": "workspace:^",
