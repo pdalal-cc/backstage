@@ -35,10 +35,10 @@
   "dependencies": {
     "@backstage/backend-plugin-api": "workspace:^",
     "@backstage/catalog-model": "workspace:^",
-    "@backstage/errors": "workspace:^",
+    "@backstage/errors": "0.1.1",
     "@backstage/plugin-auth-node": "workspace:^",
     "@backstage/plugin-catalog-node": "workspace:^",
-    "@backstage/plugin-catalog-unprocessed-entities-common": "workspace:^",
+    "@backstage/plugin-catalog-unprocessed-entities-common": "0.0.1",
     "@backstage/plugin-permission-common": "workspace:^",
     "express-promise-router": "^4.1.1",
     "knex": "^3.0.0"
