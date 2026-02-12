@@ -31,9 +31,9 @@
     "test": "backstage-cli package test"
   },
   "dependencies": {
-    "@backstage/core-plugin-api": "workspace:^",
-    "@backstage/frontend-plugin-api": "workspace:^",
-    "@backstage/plugin-app-react": "workspace:^",
+    "@backstage/core-plugin-api": "0.1.0",
+    "@backstage/frontend-plugin-api": "0.0.0",
+    "@backstage/plugin-app-react": "0.1.0",
     "@backstage/plugin-catalog-react": "workspace:^",
     "@backstage/types": "workspace:^",
     "@backstage/version-bridge": "workspace:^",
