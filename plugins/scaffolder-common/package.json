@@ -63,7 +63,7 @@
     "@backstage/catalog-model": "^0.1.1",
     "@backstage/errors": "^0.1.1",
     "@backstage/integration": "^0.1.0",
-    "@backstage/plugin-permission-common": "workspace:^",
+    "@backstage/plugin-permission-common": "0.1.0",
     "@backstage/types": "^0.1.1",
     "@microsoft/fetch-event-source": "^2.0.1",
     "@types/json-schema": "^7.0.9",
