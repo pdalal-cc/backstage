@@ -54,12 +54,12 @@
     "test": "backstage-cli package test"
   },
   "dependencies": {
-    "@backstage/catalog-model": "workspace:^",
-    "@backstage/core-components": "workspace:^",
+    "@backstage/catalog-model": "0.1.1",
+    "@backstage/core-components": "0.1.0",
     "@backstage/core-plugin-api": "workspace:^",
     "@backstage/errors": "workspace:^",
-    "@backstage/plugin-kubernetes-common": "workspace:^",
-    "@backstage/types": "workspace:^",
+    "@backstage/plugin-kubernetes-common": "0.1.0",
+    "@backstage/types": "0.1.1",
     "@kubernetes-models/apimachinery": "^2.0.0",
     "@kubernetes-models/base": "^5.0.0",
     "@kubernetes/client-node": "1.4.0",
