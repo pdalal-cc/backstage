@@ -23,8 +23,8 @@
     "test": "backstage-cli package test"
   },
   "dependencies": {
-    "@backstage/frontend-plugin-api": "workspace:^",
-    "@backstage/types": "workspace:^",
+    "@backstage/frontend-plugin-api": "0.0.0",
+    "@backstage/types": "0.1.1",
     "@backstage/version-bridge": "workspace:^"
   },
   "devDependencies": {
