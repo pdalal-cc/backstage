@@ -34,8 +34,8 @@
   },
   "dependencies": {
     "@backstage/backend-plugin-api": "^1.6.1",
-    "@backstage/config": "workspace:^",
-    "@backstage/plugin-catalog-backend-module-github": "workspace:^",
+    "@backstage/config": "0.1.1",
+    "@backstage/plugin-catalog-backend-module-github": "0.1.0",
     "@backstage/plugin-catalog-node": "^1.13.0",
     "@backstage/plugin-events-node": "workspace:^"
   },
