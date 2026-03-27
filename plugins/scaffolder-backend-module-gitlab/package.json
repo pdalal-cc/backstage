@@ -45,11 +45,11 @@
     "test": "backstage-cli package test"
   },
   "dependencies": {
-    "@backstage/backend-plugin-api": "workspace:^",
+    "@backstage/backend-plugin-api": "0.1.0",
     "@backstage/config": "workspace:^",
     "@backstage/errors": "workspace:^",
-    "@backstage/integration": "workspace:^",
-    "@backstage/plugin-scaffolder-node": "workspace:^",
+    "@backstage/integration": "0.1.0",
+    "@backstage/plugin-scaffolder-node": "0.1.0",
     "@gitbeaker/requester-utils": "^41.2.0",
     "@gitbeaker/rest": "^41.2.0",
     "luxon": "^3.0.0",
