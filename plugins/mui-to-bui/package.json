@@ -35,10 +35,10 @@
     "test": "backstage-cli package test"
   },
   "dependencies": {
-    "@backstage/core-plugin-api": "workspace:^",
-    "@backstage/frontend-plugin-api": "workspace:^",
+    "@backstage/core-plugin-api": "0.1.0",
+    "@backstage/frontend-plugin-api": "0.0.0",
     "@backstage/theme": "workspace:^",
-    "@backstage/ui": "workspace:^",
+    "@backstage/ui": "0.6.0",
     "@mui/material": "^5.12.2",
     "@mui/system": "^5.16.14"
   },
