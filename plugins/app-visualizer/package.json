@@ -37,7 +37,7 @@
     "@backstage/core-components": "workspace:^",
     "@backstage/core-plugin-api": "workspace:^",
     "@backstage/frontend-plugin-api": "workspace:^",
-    "@backstage/ui": "workspace:^",
+    "@backstage/ui": "0.6.0",
     "@remixicon/react": "^4.6.0",
     "react-aria-components": "^1.14.0"
   },
