@@ -38,7 +38,7 @@
     "@backstage/core-plugin-api": "workspace:^",
     "@backstage/frontend-plugin-api": "workspace:^",
     "@backstage/theme": "workspace:^",
-    "@backstage/ui": "workspace:^",
+    "@backstage/ui": "0.6.0",
     "@mui/material": "^5.12.2",
     "@mui/system": "^5.16.14"
   },
